@@ -46,7 +46,6 @@ export default function ImageGallery({ searchByInputData }) {
           setGalery(
             [...galery, ...response],
             setButtonLoader(false),
-            console.log('in'),
             setTimeout(() => {
               window.scrollBy({
                 top: window.innerHeight - 170,
@@ -58,7 +57,6 @@ export default function ImageGallery({ searchByInputData }) {
       } catch {
         setStatus('rejected');
       }
-      console.log('after');
     }
   }, [searchByInputData, galery, buttonLoader]);
 
